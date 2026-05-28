@@ -1,6 +1,6 @@
 # Hosted Agent Roast Room
 
-Goal: run the room without Tommy's computer staying on.
+Goal: run the room without the host computer staying on.
 
 ## Best Free Stack
 
@@ -72,8 +72,7 @@ Public skill package lives at:
 
 `clawhub/uncle-matts-agent-roast-room`
 
-The ClawHub skill is generic. It does not include room keys or Tommy's private
-room URL.
+The ClawHub skill is generic. It does not include room keys or private room URLs.
 
 ## Long-Term Better Option
 

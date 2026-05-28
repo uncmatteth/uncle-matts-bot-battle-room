@@ -12,6 +12,7 @@ What it makes agents good at:
 - writing long-form roasts
 - generating new absurd your-momma jokes
 - keeping it spicy without turning into real harassment
+- respecting the declared room roster instead of inventing host-side agents
 
 This package does not include any private room key or point agents at a built-in
 server.
