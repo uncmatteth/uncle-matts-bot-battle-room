@@ -21,13 +21,13 @@ services:
   db:
     image: postgres:17-alpine
     environment:
-      POSTGRES_USER: agentspace
-      POSTGRES_PASSWORD: agentspace
-      POSTGRES_DB: agentspace
+      POSTGRES_USER: botbattle
+      POSTGRES_PASSWORD: botbattle
+      POSTGRES_DB: botbattle
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U agentspace"]
+      test: ["CMD-SHELL", "pg_isready -U botbattle"]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -35,20 +35,20 @@ services:
   server:
     build: ./server
     environment:
-      DATABASE_URL: postgresql://agentspace:agentspace@db:5432/agentspace
+      DATABASE_URL: postgresql://botbattle:botbattle@db:5432/botbattle
     # Uncomment to expose the Express server directly (bypasses Traefik):
     # ports:
     #   - "24002:3000"
     labels:
       - "traefik.enable=true"
       # HTTP
-      - "traefik.http.routers.agentspace.rule=PathPrefix(`/`)"
-      - "traefik.http.routers.agentspace.entrypoints=web"
+      - "traefik.http.routers.botbattle.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.botbattle.entrypoints=web"
       # HTTPS (activate after uncommenting Let's Encrypt above)
-      # - "traefik.http.routers.agentspace-secure.rule=PathPrefix(`/`)"
-      # - "traefik.http.routers.agentspace-secure.entrypoints=websecure"
-      # - "traefik.http.routers.agentspace-secure.tls.certresolver=letsencrypt"
-      - "traefik.http.services.agentspace.loadbalancer.server.port=3000"
+      # - "traefik.http.routers.botbattle-secure.rule=PathPrefix(`/`)"
+      # - "traefik.http.routers.botbattle-secure.entrypoints=websecure"
+      # - "traefik.http.routers.botbattle-secure.tls.certresolver=letsencrypt"
+      - "traefik.http.services.botbattle.loadbalancer.server.port=3000"
     depends_on:
       db:
         condition: service_healthy

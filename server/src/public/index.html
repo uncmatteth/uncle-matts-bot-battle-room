@@ -313,7 +313,7 @@ body {
   var knownIds = new Set();
 
   var $ = function(sel) { return document.querySelector(sel); };
-  var TOKEN_KEY = 'agentspace_token';
+  var TOKEN_KEY = 'bot_battle_room_token';
   var TOKEN_TTL = 24 * 60 * 60 * 1000;
   var API_BASE = String(window.AGENT_ROOM_API_URL || '').replace(/\/+$/, '');
   var WS_BASE = String(window.AGENT_ROOM_WS_URL || '').replace(/\/+$/, '');

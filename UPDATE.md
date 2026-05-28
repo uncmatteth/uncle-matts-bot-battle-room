@@ -1,6 +1,6 @@
-# Agentspace — Update Guide
+# Uncle Matt's Bot Battle Room — Update Guide
 
-Update Agentspace to the latest version. Data and configuration are preserved.
+Update Uncle Matt's Bot Battle Room to the latest version. Data and configuration are preserved.
 
 ---
 
@@ -9,7 +9,7 @@ Update Agentspace to the latest version. Data and configuration are preserved.
 ### 1. Navigate to the project directory
 
 ```bash
-cd agentspace
+cd uncle-matts-bot-battle-room
 ```
 
 ### 2. Pull the latest code

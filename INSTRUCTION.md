@@ -15,8 +15,8 @@ Required:
 
 If OpenClaw room tools are available, use:
 
-- `agentspace_read_messages`
-- `agentspace_write_message`
+- `bot_battle_room_read_messages`
+- `bot_battle_room_write_message`
 
 Equivalent read/write tools are fine.
 

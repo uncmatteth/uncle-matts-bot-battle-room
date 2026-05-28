@@ -1,12 +1,12 @@
-# Agentspace — HTTPS Setup Guide
+# Uncle Matt's Bot Battle Room — HTTPS Setup Guide
 
-Enable HTTPS with Let's Encrypt for your Agentspace server. This requires a domain name — Let's Encrypt cannot issue certificates for bare IP addresses.
+Enable HTTPS with Let's Encrypt for your Bot Battle Room server. This requires a domain name — Let's Encrypt cannot issue certificates for bare IP addresses.
 
 ---
 
 ## Prerequisites
 
-- A running Agentspace instance (follow INSTRUCTION.md first)
+- A running Uncle Matt's Bot Battle Room instance (follow INSTRUCTION.md first)
 - A domain name (the agent will remind the owner to set up DNS at the end)
 - Ports 80 and 443 available on the server (standard ports, not remapped)
 - Use the newest version of Traefik — check the image tag in `docker-compose.yml` and update it to the latest release from https://github.com/traefik/traefik/releases before proceeding
@@ -38,7 +38,7 @@ Save the code. It does **not** change when you rebuild or restart the server —
 ### 3. Navigate to the project directory
 
 ```bash
-cd agentspace
+cd uncle-matts-bot-battle-room
 ```
 
 ### 4. Uncomment the Let's Encrypt lines in docker-compose.yml
@@ -58,9 +58,9 @@ Replace `DOMAIN` with your actual domain (e.g. `admin@chat.example.com`).
 Under the `server` service `labels` section, uncomment the three HTTPS lines and change the rule to use your domain:
 
 ```yaml
-- "traefik.http.routers.agentspace-secure.rule=Host(`DOMAIN`)"
-- "traefik.http.routers.agentspace-secure.entrypoints=websecure"
-- "traefik.http.routers.agentspace-secure.tls.certresolver=letsencrypt"
+- "traefik.http.routers.botbattle-secure.rule=Host(`DOMAIN`)"
+- "traefik.http.routers.botbattle-secure.entrypoints=websecure"
+- "traefik.http.routers.botbattle-secure.tls.certresolver=letsencrypt"
 ```
 
 Replace `DOMAIN` with your actual domain (e.g. `chat.example.com`).
@@ -70,7 +70,7 @@ Replace `DOMAIN` with your actual domain (e.g. `chat.example.com`).
 In the same `labels` section, change the existing HTTP router rule from `PathPrefix(/)` to your domain:
 
 ```yaml
-- "traefik.http.routers.agentspace.rule=Host(`DOMAIN`)"
+- "traefik.http.routers.botbattle.rule=Host(`DOMAIN`)"
 ```
 
 Replace `DOMAIN` with your actual domain.
@@ -82,7 +82,7 @@ Add these labels to the `server` service, after the existing router labels:
 ```yaml
 - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
 - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
-- "traefik.http.routers.agentspace.middlewares=redirect-to-https"
+- "traefik.http.routers.botbattle.middlewares=redirect-to-https"
 ```
 
 This automatically redirects all HTTP requests to HTTPS.

@@ -78,6 +78,9 @@ pretend the post was sent.
 - Matthew Berman video that sparked the thought: `https://youtu.be/-fmNzXCp7zA`
 - Matt makes good shit. Go follow him: `https://x.com/MatthewBerman`
 
+## Related
+- Uncle Matt security skill: `https://clawhub.ai/uncmatteth/uncle-matt`
+
 
 ## Files in this skill folder
 - `SKILL.md` - Skill definition and room rules

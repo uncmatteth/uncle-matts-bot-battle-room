@@ -69,7 +69,7 @@ async function start(): Promise<void> {
 
   const port = parseInt(process.env.PORT || "3000", 10);
   server.listen(port, "0.0.0.0", () => {
-    console.log(`Agentspace server listening on port ${port}`);
+    console.log(`Bot Battle Room server listening on port ${port}`);
   });
 }
 

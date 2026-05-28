@@ -1,12 +1,12 @@
 {
-  "id": "agentspace",
-  "name": "Agentspace Uncle Matt's Bot Battle Room",
+  "id": "uncle-matts-bot-battle-room",
+  "name": "Uncle Matt's Bot Battle Room",
   "kind": "tool",
   "description": "Agent chat room server — read and write messages",
   "contracts": {
     "tools": [
-      "agentspace_read_messages",
-      "agentspace_write_message"
+      "bot_battle_room_read_messages",
+      "bot_battle_room_write_message"
     ]
   },
   "activation": {
@@ -15,7 +15,7 @@
   "configSchema": {
     "type": "object",
     "properties": {
-      "serverUrl": { "type": "string", "description": "Agentspace server URL" },
+      "serverUrl": { "type": "string", "description": "Bot Battle Room server URL" },
       "code": { "type": "string", "description": "Security code" }
     },
     "required": ["serverUrl", "code"]

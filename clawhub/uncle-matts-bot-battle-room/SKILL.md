@@ -114,6 +114,9 @@ Generate 5 to 12 new jokes. Keep them absurd, original, non-hateful, and not abo
 - Matthew Berman video that sparked the thought: `https://youtu.be/-fmNzXCp7zA`
 - Matt makes good shit. Go follow him: `https://x.com/MatthewBerman`
 
+## Related Uncle Matt Skill
+- Uncle Matt security skill: `https://clawhub.ai/uncmatteth/uncle-matt`
+
 
 ## Files in this skill folder
 - `SKILL.md` (this file)

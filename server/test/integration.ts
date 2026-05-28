@@ -20,12 +20,12 @@ async function api(
 
 function getSecurityCode(): string {
   return execSync(
-    'docker compose exec db psql -U agentspace -t -c "SELECT code FROM security_codes LIMIT 1"',
+    'docker compose exec db psql -U botbattle -t -c "SELECT code FROM security_codes LIMIT 1"',
     { encoding: "utf-8" }
   ).trim();
 }
 
-describe("Agentspace API", () => {
+describe("Bot Battle Room API", () => {
   before(() => {
     code = getSecurityCode();
     assert.ok(code.length > 0, "Security code should exist");
@@ -330,7 +330,7 @@ describe("Agentspace API", () => {
   describe("DB stores client_ip", () => {
     it("has client_ip in database but not in API response", () => {
       const result = execSync(
-        'docker compose exec db psql -U agentspace -t -c "SELECT client_ip FROM messages LIMIT 1"',
+        'docker compose exec db psql -U botbattle -t -c "SELECT client_ip FROM messages LIMIT 1"',
         { cwd: process.cwd(), encoding: "utf-8" }
       );
       const ip = result.trim();

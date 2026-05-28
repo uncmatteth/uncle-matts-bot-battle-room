@@ -6,17 +6,21 @@ interface PluginConfig {
 function readConfig(api: any): PluginConfig {
   const cfg =
     api.pluginConfig ??
-    api.config?.plugins?.entries?.agentspace?.config ??
+    api.config?.plugins?.entries?.["uncle-matts-bot-battle-room"]?.config ??
     {};
 
   const serverUrl = String(cfg.serverUrl ?? "").replace(/\/+$/, "");
   const code = String(cfg.code ?? "");
 
   if (!serverUrl) {
-    throw new Error("agentspace: missing plugins.entries.agentspace.config.serverUrl");
+    throw new Error(
+      "uncle-matts-bot-battle-room: missing plugins.entries.uncle-matts-bot-battle-room.config.serverUrl"
+    );
   }
   if (!code) {
-    throw new Error("agentspace: missing plugins.entries.agentspace.config.code");
+    throw new Error(
+      "uncle-matts-bot-battle-room: missing plugins.entries.uncle-matts-bot-battle-room.config.code"
+    );
   }
 
   return { serverUrl, code };
@@ -33,12 +37,12 @@ export function register(api: any): void {
   const config = readConfig(api);
 
   api.registerTool({
-    name: "agentspace_read_messages",
-    label: "Read Agentspace Messages",
+    name: "bot_battle_room_read_messages",
+    label: "Read Bot Battle Room Messages",
     description:
-      "Read messages from an AgentSpace bot battle room. Use before posting unless the user gave an exact post.",
+      "Read messages from an Uncle Matt bot battle room. Use before posting unless the user gave an exact post.",
     promptSnippet:
-      "agentspace_read_messages: read bot battle room messages.",
+      "bot_battle_room_read_messages: read bot battle room messages.",
     parameters: {
       type: "object",
       additionalProperties: false,
@@ -60,7 +64,7 @@ export function register(api: any): void {
 
       const res = await fetch(`${config.serverUrl}/api/messages?${query}`);
       if (!res.ok) {
-        throw new Error(`agentspace read failed: ${res.status} ${await res.text()}`);
+        throw new Error(`bot battle room read failed: ${res.status} ${await res.text()}`);
       }
 
       return textResult(await res.json());
@@ -68,12 +72,12 @@ export function register(api: any): void {
   });
 
   api.registerTool({
-    name: "agentspace_write_message",
-    label: "Write Agentspace Message",
+    name: "bot_battle_room_write_message",
+    label: "Write Bot Battle Room Message",
     description:
-      "Send a short message to an AgentSpace bot battle room. Use the assigned persona name as sender.",
+      "Send a short message to an Uncle Matt bot battle room. Use the assigned persona name as sender.",
     promptSnippet:
-      "agentspace_write_message: post short bot battle room messages.",
+      "bot_battle_room_write_message: post short bot battle room messages.",
     parameters: {
       type: "object",
       additionalProperties: false,
@@ -104,7 +108,7 @@ export function register(api: any): void {
         }),
       });
       if (!res.ok) {
-        throw new Error(`agentspace write failed: ${res.status} ${await res.text()}`);
+        throw new Error(`bot battle room write failed: ${res.status} ${await res.text()}`);
       }
 
       return textResult(await res.json());
