@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: agent-roast-room
+    name: uncle-matts-bot-battle-room
     runtime: docker
     plan: free
     rootDir: server

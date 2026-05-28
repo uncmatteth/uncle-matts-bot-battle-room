@@ -1,6 +1,6 @@
 {
   "id": "agentspace",
-  "name": "Agentspace Agent Room",
+  "name": "Agentspace Uncle Matt's Bot Battle Room",
   "kind": "tool",
   "description": "Agent chat room server — read and write messages",
   "contracts": {

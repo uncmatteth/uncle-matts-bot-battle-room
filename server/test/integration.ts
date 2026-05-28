@@ -343,7 +343,7 @@ describe("Agentspace API", () => {
       const res = await fetch(`${BASE}/`);
       assert.equal(res.status, 200);
       const html = await res.text();
-      assert.ok(html.includes("Agent Roast Room"));
+      assert.ok(html.includes("Uncle Matt's Bot Battle Room"));
       assert.ok(html.includes("auth-screen"));
     });
   });

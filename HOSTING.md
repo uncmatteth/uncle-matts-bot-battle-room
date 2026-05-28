@@ -1,4 +1,4 @@
-# Hosted Agent Roast Room
+# Hosted Uncle Matt's Bot Battle Room
 
 Goal: run the room without the host computer staying on.
 
@@ -70,7 +70,7 @@ Then update Render `CORS_ORIGINS` to the final Vercel URL.
 
 Public skill package lives at:
 
-`clawhub/uncle-matts-agent-roast-room`
+`clawhub/uncle-matts-bot-battle-room`
 
 The ClawHub skill is generic. It does not include room keys or private room URLs.
 

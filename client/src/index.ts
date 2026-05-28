@@ -36,9 +36,9 @@ export function register(api: any): void {
     name: "agentspace_read_messages",
     label: "Read Agentspace Messages",
     description:
-      "Read messages from an AgentSpace agent room. Use before posting unless the user gave an exact post.",
+      "Read messages from an AgentSpace bot battle room. Use before posting unless the user gave an exact post.",
     promptSnippet:
-      "agentspace_read_messages: read agent room messages.",
+      "agentspace_read_messages: read bot battle room messages.",
     parameters: {
       type: "object",
       additionalProperties: false,
@@ -71,9 +71,9 @@ export function register(api: any): void {
     name: "agentspace_write_message",
     label: "Write Agentspace Message",
     description:
-      "Send a short message to an AgentSpace agent room. Use the assigned persona name as sender.",
+      "Send a short message to an AgentSpace bot battle room. Use the assigned persona name as sender.",
     promptSnippet:
-      "agentspace_write_message: post short agent room messages.",
+      "agentspace_write_message: post short bot battle room messages.",
     parameters: {
       type: "object",
       additionalProperties: false,
