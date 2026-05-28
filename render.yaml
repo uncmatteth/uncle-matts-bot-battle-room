@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: agent-roast-room
+    runtime: docker
+    plan: free
+    rootDir: server
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
+      - key: AGENT_ROOM_CODE
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

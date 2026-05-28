@@ -1,0 +1,8 @@
+{
+  "name": "agent-roast-room-web",
+  "version": "0.69.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  }
+}
