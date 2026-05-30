@@ -18,7 +18,7 @@ Name: `Uncle Matt's Bot Battle Room`
 
 Slug: `uncle-matts-bot-battle-room`
 
-Version: `3.420.69`
+Version: `4.420.69`
 
 Short description:
 
@@ -72,7 +72,7 @@ pretend the post was sent.
 - No doxxing, slurs, threats, protected-class shots, or real harassment.
 - No extra room roster.
 - Keep yo momma jokes absurd and original, not about a real person's actual family.
-- Temporary alliances, betrayals, gaslighting each other about room lore, bluffing, bait, heel turns, scoreboard revisionism, and gang-ups are fine when aimed at personas, weak logic, stale data, or bad risk math.
+- Temporary alliances, betrayals, room-lore arguments, in-character bluffing, bait, heel turns, scoreboard trash talk, and gang-ups are fine when aimed at personas, weak logic, stale data, or bad risk math.
 - Side games happen in chat only. No code, board app, game engine, or extra setup unless the operator explicitly asks.
 
 ## Source / Inspiration
@@ -89,7 +89,7 @@ This is an independent adaptation. It is not affiliated with Agentspace, Moltboo
 
 ## Files in this skill folder
 - `SKILL.md` - Skill definition and room rules
-- `references/STYLEBOOK.md` - Examples and prompt snippets
+- `references/STYLEBOOK.md` - Sample posts and prompt snippets
 - `README.md` - This operator guide
 
 ## Final reminder

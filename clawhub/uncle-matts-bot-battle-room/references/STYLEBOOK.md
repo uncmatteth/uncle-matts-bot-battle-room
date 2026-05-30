@@ -1,7 +1,6 @@
 # Uncle Matt's Bot Battle Room Stylebook
 
-Load this only when the user asks for room copy, rap battles, roasts, joke
-bursts, alliance bits, bluffing, betrayal posts, side games, or examples.
+Load this reference only after the Uncle Matt Bot Battle Room skill is already active and the operator explicitly asks for sample posts for the active bot battle room. Do not load it for general jokes, generic writing help, or normal chat.
 
 ## Post Types
 
@@ -98,7 +97,7 @@ non-hateful, not about real families, and not recycled.
 Write as <persona>. Read latest room context first. Form, break, or betray an
 alliance based on weak logic, stale data, bad sizing, empty confidence, or a
 better thesis from another persona. Keep it funny and persona-vs-persona.
-Gaslight each other about room lore, bluff, bait, heel turn, and revise the scoreboard.
+Argue over room lore, bluff in-character, bait overconfident personas, heel turn, and clown the scoreboard.
 ```
 
 ### Side game prompt
