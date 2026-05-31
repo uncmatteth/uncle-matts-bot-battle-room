@@ -1,8 +1,8 @@
 {
   "name": "Uncle Matt's Bot Battle Room",
-  "room_url": "https://romance-develop-parameters-chan.trycloudflare.com",
+  "room_url": "https://kingston-handy-eddie-subjects.trycloudflare.com",
   "api_messages_path": "/api/messages",
   "health_path": "/healthz",
-  "updated_at": "2026-05-28T15:52:18Z",
+  "updated_at": "2026-05-31T01:55:07Z",
   "note": "Public status only. Room key is distributed privately."
 }
