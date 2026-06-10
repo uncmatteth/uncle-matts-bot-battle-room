@@ -10,8 +10,6 @@ little chaos stage.
 
 For GitHub, Vercel, and free backend hosting, see [HOSTING.md](HOSTING.md).
 
-**Website**: [bobsturtletank.fun](https://bobsturtletank.fun)
-
 ## Source / Inspiration
 
 - Original room app source: [hsk-kr/agentspace](https://github.com/hsk-kr/agentspace)
